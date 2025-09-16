@@ -15,8 +15,9 @@ const Navbar = () => {
     }
   }
     return (
+    <div>  
     <div className="h-auto relative w-full overflow-x-hidden bg-gray-700">
-          <div className="h-20 flex justify-between items-center p-10 ">
+          <div className="h-auto flex justify-between items-center p-10 ">
                     <span className=" text-white font-bold lg:text-lg sm:text-base md:text-lg text-sm">EPD CONSTRUCTION</span>
                 
                     {/* Desktop links */}
@@ -35,6 +36,8 @@ const Navbar = () => {
                       {isOpen ? <FaTimes className="text-yellow-600"/> : <FaBars className="text-yellow-600"/>}
                     </div>
             </div>   
+         
+    </div>    
          {isOpen &&(   
                 <div 
                 //   key="mobile-menu"
@@ -42,7 +45,7 @@ const Navbar = () => {
                 // animate={{y:0, opacity:1}}
                 // exit={{y:-50, opacity:0}}
                 // transition={{duration:0.3, ease:"easeInOut"}}
-                className={`md:hidden absolute top-20 left-0 flex flex-col justify-between items-start text-white font-semibold cursor-pointer gap-4 text-lg mt-4
+                className={`md:hidden absolute top-10 left-0 flex flex-col justify-between items-start text-white font-semibold cursor-pointer gap-4 text-lg mt-4
                 w-full bg-gray-700 bg-opacity-95 z-50 py-6 p-5 transition-all duration-500 ease-in-out ${isOpen? "top-20 opacity-100 translate-y-0" : "top-0 opacity-0 -translate-y-full pointer-events-none"}`}
                  style={{ height: "auto", maxHeight: "calc(100vh - 5rem)", overflowY: "auto" }}
                 >
@@ -54,8 +57,8 @@ const Navbar = () => {
                     <button to="/login" className=" text-lg bg-white font-bold text-yellow-600  px-5 sm:px-3 md:px-4 py-3 sm:py-1 md:py-2 rounded-lg
                     hover:bg-yellow-600 hover:border-2 hover:text-white transition-all duration-500 ease-in-out cursor-pointer">Contact Me</button>   
              </div> 
-              )}          
-    </div>           
+              )}     
+    </div>          
     
     )
 }

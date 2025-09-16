@@ -30,21 +30,21 @@ const Hero = ({ heroData }) => {
 
 
   return (
-    <div className="min-h-screen relative w-full overflow-x-hidden bg-gray-600">
-      <div className="absolute z-20 inset-0 bg-cover bg-center bg-no-repeat opacity-60" style={{ backgroundImage: `url(${images[currentImage]})` }}></div>
-      <div className="relative z-20 flex flex-col justify-center items-center w-[95%] mx-auto mt-36 bg-gray-200 opacity-80">
+    <div className="min-h-screen relative w-full overflow-x-hidden bg-gray-500 ">
+      <div className="absolute z-20 inset-0 bg-cover bg-center bg-no-repeat opacity-60 blur-sm bg-white/20 backdrop-blur-md" style={{ backgroundImage: `url(${images[currentImage]})` }}></div>
+      <div className="relative z-20 flex flex-col justify-center items-center mx-auto opacity-80">
         {/* Left Section */}
-        <div className="flex flex-col gap-4 justify-center items-center text-left lg:w-4xl w-full md:w-full p-5 ">
+        <div className="flex flex-col gap-4 justify-center items-center lg:w-4xl w-full md:w-full p-5 opacity-100 mt-20 ">
           <small className="text-xs sm:text-sm text-gray-600">
-            <i>Hello There</i>
+            {/* <i>Hello There</i> */}
           </small>
           {heroData.headings.map((data, id) => ( 
           <h1 
           key={id}
-          className="text-3xl lg:text-5xl sm:text-3xl md:text-4xl font-bold leading-tight text-yellow-600">
+          className="text-3xl lg:text-5xl text-center sm:text-3xl md:text-4xl font-bold leading-tight text-yellow-500">
              {data.heroH1}{" "}
               {data.heroSpan && (
-                <span className="text-yellow-600 decoration-yellow-600">
+                <span className="text-yellow-500 decoration-yellow-600">
                   {data.heroSpan}
                 </span>
               )}
@@ -53,7 +53,7 @@ const Hero = ({ heroData }) => {
             ))}
           {/* Paragraph*/}
           <p
-            className="lg:text-lg text-[18px] sm:text-sm md:text-base max-w-full md:w-[90%] text-gray-600 font-semibold"
+            className="lg:text-lg text-[19px] font-semibold text-center sm:text-sm md:text-base max-w-full md:w-[90%] text-white"
           >
             {heroData.ptext}
           </p>

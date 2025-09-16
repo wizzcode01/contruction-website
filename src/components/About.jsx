@@ -14,7 +14,7 @@ const About = () => {
             <img
               src={ejiroImg4}
               alt="Hero"
-              className="w-full h-full object-cover border-2 shadow-lg"
+              className="w-full h-full object-cover border shadow-lg"
             />
           </figure>
 
