@@ -18,7 +18,8 @@ import ZionChurch3 from "../assets/Clients_Images/ZionChurch3.jpg"
 import ZionChurch4 from "../assets/Clients_Images/ZionChurch4.jpg"
 import ZionChurch5 from "../assets/Clients_Images/ZionChurch5.jpg"
 import Values from "../components/Values";
-import { desc } from "framer-motion/client"
+import Services from "../components/Services";
+import WhyChoose from "../components/WhyChoose"
 
 
 
@@ -74,6 +75,8 @@ const Landing = () => {
         <About/>
         <Values/>
         <Clients clients={clients}/>
+        <Services/>
+        <WhyChoose/>
       </>
     ) 
 }

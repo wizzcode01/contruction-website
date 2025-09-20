@@ -2,7 +2,7 @@ import { FaArrowRight }  from "react-icons/fa"
 
 const Values = () => {
     return (
-        <div className="bg-gray-700">
+        <div className="bg-gray-950">
         <div className="flex flex-col gap-4 m-5 p-4">
             <h1 className="text-yellow-500 text-2xl font-semibold">Our Core Values</h1>
             <div className="flex flex-col text-white gap-2 text-lg md:text-2xl font-bold">

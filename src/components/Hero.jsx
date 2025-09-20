@@ -34,7 +34,7 @@ const Hero = ({ heroData }) => {
       <div className="absolute z-20 inset-0 bg-cover bg-center bg-no-repeat opacity-60 blur-sm bg-white/20 backdrop-blur-md" style={{ backgroundImage: `url(${images[currentImage]})` }}></div>
       <div className="relative z-20 flex flex-col justify-center items-center mx-auto opacity-80">
         {/* Left Section */}
-        <div className="flex flex-col gap-4 justify-center items-center lg:w-4xl w-full md:w-full p-5 opacity-100 mt-20 ">
+        <div className="flex flex-col gap-4 justify-center items-center lg:w-4xl w-full md:w-full p-5 opacity-100 mt-32 ">
           <small className="text-xs sm:text-sm text-gray-600">
             {/* <i>Hello There</i> */}
           </small>
@@ -59,7 +59,7 @@ const Hero = ({ heroData }) => {
           </p>
        
           {/* Buttons Animation */}
-          <div className="flex gap-2 flex-wrap items-start lg:justify-start">
+          <div className="flex gap-2 flex-wrap items-start  lg:justify-start">
             {heroData.button.map((list, id) => (
               <button
                 key={id}
