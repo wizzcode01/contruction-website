@@ -2,7 +2,6 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import { useState } from 'react'
 
 const Clients = ({ clients }) => {
-  // Initialize currentImage state - one index per client
   const [currentImage, setCurrentImage] = useState(
     clients.map(() => 0)
   )
@@ -37,7 +36,6 @@ const Clients = ({ clients }) => {
             
             return (
               <div key={clientIndex} className="bg-gray-50 rounded-2xl p-6 shadow-lg">
-                {/* Client Title */}
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                   {client.title}
                 </h2>
@@ -56,7 +54,6 @@ const Clients = ({ clients }) => {
                     <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  {/* Navigation Buttons */}
                   <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-4 pointer-events-none">
                     {/* Previous Button */}
                     <button
