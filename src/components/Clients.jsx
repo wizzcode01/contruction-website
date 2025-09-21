@@ -35,15 +35,15 @@ const Clients = ({ clients }) => {
             const currentImageIndex = currentImage[clientIndex]
             
             return (
-              <div key={clientIndex} className="bg-gray-50 rounded-2xl p-6 shadow-lg">
+              <div key={clientIndex} className="bg-gray-50 rounded-2xl p-6 shadow-lg ">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
                   {client.title}
                 </h2>
                 
                 {/* Image Carousel Container */}
-                <div className="relative group">
+                <div className="relative group ">
                   {/* Main Image Display */}
-                  <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden">
+                  <div className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
                     <img
                       src={allImages[currentImageIndex]}
                       alt={`${client.title} - Image ${currentImageIndex + 1}`}

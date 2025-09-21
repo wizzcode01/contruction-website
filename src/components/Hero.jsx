@@ -30,10 +30,8 @@ const Hero = ({ heroData }) => {
     <div className="min-h-screen relative w-full overflow-x-hidden bg-gray-500 ">
       <div className="absolute z-20 inset-0 bg-cover bg-center bg-no-repeat opacity-60 blur-sm bg-white/20 backdrop-blur-md" style={{ backgroundImage: `url(${images[currentImage]})` }}></div>
       <div className="relative z-20 flex flex-col justify-center items-center mx-auto opacity-80">
-        {/* Left Section */}
-        <div className="flex flex-col gap-4 justify-center items-center lg:w-4xl w-full md:w-full p-5 opacity-100 mt-32 ">
+        <div className="flex flex-col gap-4 justify-center items-center lg:w-4xl w-full md:w-full p-5 opacity-100 mt-32 lg:m-52">
           <small className="text-xs sm:text-sm text-gray-600">
-            {/* <i>Hello There</i> */}
           </small>
           {heroData.headings.map((data, id) => ( 
           <motion.h1 
@@ -51,7 +49,6 @@ const Hero = ({ heroData }) => {
             
           </motion.h1>
             ))}
-          {/* Paragraph*/}
           <motion.p
             initial={{opacity:0}}
             animate={{opacity:1}}
@@ -61,7 +58,6 @@ const Hero = ({ heroData }) => {
             {heroData.ptext}
           </motion.p>
        
-          {/* Buttons Animation */}
           <div className="flex gap-2 flex-wrap items-start  lg:justify-start">
             {heroData.button.map((list, id) => (
               <motion.button
