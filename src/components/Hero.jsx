@@ -39,7 +39,10 @@ const Hero = ({ heroData }) => {
             {/* <i>Hello There</i> */}
           </small>
           {heroData.headings.map((data, id) => ( 
-          <h1 
+          <motion.h1 
+          initial={{opacity:0, y:50}}
+          animate={{opacity:1, y:0}}
+          transition={{duration:1.3}}
           key={id}
           className="text-3xl lg:text-5xl text-center sm:text-3xl md:text-4xl font-bold leading-tight text-yellow-500">
              {data.heroH1}{" "}
@@ -49,19 +52,25 @@ const Hero = ({ heroData }) => {
                 </span>
               )}
             
-          </h1>
+          </motion.h1>
             ))}
           {/* Paragraph*/}
-          <p
+          <motion.p
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{duration:1}}
             className="lg:text-lg text-[19px] font-semibold text-center sm:text-sm md:text-base max-w-full md:w-[90%] text-white"
           >
             {heroData.ptext}
-          </p>
+          </motion.p>
        
           {/* Buttons Animation */}
           <div className="flex gap-2 flex-wrap items-start  lg:justify-start">
             {heroData.button.map((list, id) => (
-              <button
+              <motion.button
+                initial={{opacity: 0, x: -100}}
+                animate={{x:0, opacity: 1}}
+                transition={{ duration: 1.2, ease: "easeOut" }}
                 key={id}
                 className={`py-2 px-4 sm:py-3 sm:px-5 text-lg sm:text-sm md:text-base transition-all ease-in-out duration-150 rounded-4xl
                   ${
@@ -71,7 +80,7 @@ const Hero = ({ heroData }) => {
                   }`}
               >
                 {list}
-              </button>
+              </motion.button>
             ))}
           </div>
         </div>

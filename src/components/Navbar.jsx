@@ -1,6 +1,7 @@
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {  motion, AnimatePresence} from "framer-motion"
           
 
 const Navbar = () => {
@@ -14,6 +15,16 @@ const Navbar = () => {
     else{
       setIsOpen(false)
     }
+  }
+
+  const menuVariants = {
+    hidden: {y: "-100%", opacity: 0},
+    visible: {y: 0 , opacity: 1, transition: {
+      duration: 0.3,
+      ease: "easeInOut",
+      staggerChildren: 0.1
+    }},
+    exit: {y: "-100%", opacity: 0}
   }
     return (
     <div>  
@@ -39,13 +50,14 @@ const Navbar = () => {
             </div>   
          
     </div>    
+        <AnimatePresence>
          {isOpen &&(   
-                <div 
-                //   key="mobile-menu"
-                // initial={{y:-50, opacity:0}}
-                // animate={{y:0, opacity:1}}
-                // exit={{y:-50, opacity:0}}
-                // transition={{duration:0.3, ease:"easeInOut"}}
+                <motion.div 
+                 variants={menuVariants}
+                 initial= "hidden"
+                 animate="visible"
+                 exit="exit"
+                 transition={{duration:0.5, ease:"easeOut"}}
                 className={`md:hidden absolute top-10 left-0 flex flex-col justify-between items-start text-white font-semibold cursor-pointer gap-4 text-lg mt-4
                 w-full bg-gray-950 bg-opacity-95 z-50 py-6 p-5 transition-all duration-500 ease-in-out ${isOpen? "top-20 opacity-100 translate-y-0" : "top-0 opacity-0 -translate-y-full pointer-events-none"}`}
                  style={{ height: "auto", maxHeight: "calc(100vh - 5rem)", overflowY: "auto" }}
@@ -57,8 +69,9 @@ const Navbar = () => {
                     <Link to="/AdminLogin" className=" hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Testimonials</Link>
                     <button to="/login" className=" text-lg bg-white font-bold text-yellow-600  px-5 sm:px-3 md:px-4 py-3 sm:py-1 md:py-2 rounded-lg
                     hover:bg-yellow-600 hover:border-2 hover:text-white transition-all duration-500 ease-in-out cursor-pointer">Contact Me</button>   
-             </div> 
-              )}     
+             </motion.div> 
+              )}  
+          </AnimatePresence>       
     </div>          
     
     )

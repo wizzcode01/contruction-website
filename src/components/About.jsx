@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import ejiroImg4 from "../assets/DeWatermark.jpeg"
 
  
@@ -23,6 +24,12 @@ const About = () => {
         
             className="flex gap-4 flex-col mt-6 sm:mt-10 md:text-left order-1"
           >
+          <motion.div
+           initial={{opacity:0, y:100}}
+           animate={{opacity:1, y:0}}
+           transition={{duration:1.5, ease:"easeOut"}}
+           viewport={{once:true}}
+          className="flex flex-col gap-2">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-600 leading-snug">
                About us
             </h1>
@@ -41,7 +48,7 @@ const About = () => {
                 LEARN MORE
               </button>
             </div>
-            
+          </motion.div>
              <div className="text-left">
                 <h2 className="text-yellow-600 font-bold text-lg">Our Promise</h2>
                 <p className="text-2xl text-gray-700 font-bold">We create enduring works that stand the test of time, reflecting both our dedication and your vision.</p>

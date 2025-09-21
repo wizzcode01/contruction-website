@@ -34,7 +34,7 @@ const Landing = () => {
         ],
     
         ptext: "At EPD CONSTRUCTION SERVICES, we bring innovation, precision, and passion to every project from building design to real estate development and project management.",
-        button: ["view my portfolio",  "Hire me"]
+        button: ["Need a service?",  "Hire me"]
    }
    const clients = [
       {
