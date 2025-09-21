@@ -99,7 +99,9 @@ const Services = () => {
           className="text-center mt-16"
         >
           <p className="text-gray-400 text-lg mb-8">Ready to bring your vision to life?</p>
-          <button className="bg-yellow-600 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+          <button 
+           onClick={() => window.open("mailto:epdconstruction1@gmail.com?subject=Service%20Inquiry&body=Hello,%20I%20am%20interested%20in%20your%20services.", "_blank")}
+          className="bg-yellow-600 hover:bg-yellow-500 text-black font-bold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
             Get Started Today
           </button>
         </motion.div>

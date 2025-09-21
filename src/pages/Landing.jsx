@@ -71,12 +71,12 @@ const Landing = () => {
     return (
        <>
         <Navbar/>
-        <Hero heroData={heroData}/>
-        <About/>
-        <Values/>
-        <Clients clients={clients}/>
-        <Services/>
-        <WhyChoose/>
+         <div id="hero"><Hero heroData={heroData}/></div>
+         <div id="about"><About/></div>
+         <div id="values"><Values/></div>
+         <div id="clients"><Clients clients={clients}/></div>
+         <div id="services"><Services/></div>
+         <div id="whychoose"><WhyChoose/></div>
       </>
     ) 
 }

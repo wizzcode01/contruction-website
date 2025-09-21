@@ -14,7 +14,6 @@ import { motion, AnimatePresence }  from "framer-motion"
 
 const Hero = ({ heroData }) => {
 
-
   const [currentImage, setCurrentImage] = useState(0)
 
   const images = [ HouseImg2, HouseImg3, HouseImg4, HouseImg5, HouseImg6, HouseImg7, HouseImg8, HouseImg9, HouseImg10, HouseImg11]
@@ -26,8 +25,6 @@ const Hero = ({ heroData }) => {
     }, 3000)
     return () => clearInterval(interval)
   }, [])
-
-
 
   return (
     <div className="min-h-screen relative w-full overflow-x-hidden bg-gray-500 ">
@@ -72,6 +69,7 @@ const Hero = ({ heroData }) => {
                 animate={{x:0, opacity: 1}}
                 transition={{ duration: 1.2, ease: "easeOut" }}
                 key={id}
+                onClick={() => window.open("https://wa.me/234912252079", "_blank")}
                 className={`py-2 px-4 sm:py-3 sm:px-5 text-lg sm:text-sm md:text-base transition-all ease-in-out duration-150 rounded-4xl
                   ${
                     id === 0

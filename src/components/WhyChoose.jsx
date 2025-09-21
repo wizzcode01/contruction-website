@@ -305,10 +305,10 @@ const Footer = () => {
                 className="text-2xl font-bold text-yellow-500 mb-4"
                 whileHover={{ scale: 1.05 }}
               >
-                Oat Construction
+                EPD CONSTRUCTION SERVICES
               </motion.h3>
               <p className="text-gray-300 leading-relaxed">
-                Oat Construction Nigeria Limited is an indigenous Building and Civil Engineering Construction Company capable of handling every conceivable design in building, civil engineering and allied fields.
+                EPD Construction is an indigenous Building and Civil Engineering Construction Company capable of handling every conceivable design in building, civil engineering and allied fields.
               </p>
             </div>
 
@@ -323,8 +323,8 @@ const Footer = () => {
               >
                 <FaMapMarkerAlt className="text-yellow-500 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">1, Akintoye Street, Off Mcneil Street,</p>
-                  <p className="text-gray-300">P.O. Box 2566, Sabo, Lagos.</p>
+                  <p className="text-gray-300">Ozoro Delta State</p>
+                  <p className="text-gray-300">Kwala, Delta.</p>
                 </div>
               </motion.div>
 
@@ -335,8 +335,8 @@ const Footer = () => {
               >
                 <FaPhone className="text-yellow-500" />
                 <div>
-                  <p className="text-gray-300">0805 248 2318, 0802 315 3564,</p>
-                  <p className="text-gray-300">0814 585 1433</p>
+                  <p className="text-gray-300">0906 468 3506, ,0912 252 0791</p>
+                 
                 </div>
               </motion.div>
 
@@ -347,8 +347,7 @@ const Footer = () => {
               >
                 <FaEnvelope className="text-yellow-500 mt-1" />
                 <div>
-                  <p className="text-gray-300">info@oatconstruction.com</p>
-                  <p className="text-gray-300">oatnigltd_designbuild@yahoo.co.uk</p>
+                  <p className="text-gray-300">epdconstruction1@gmail.com</p>
                 </div>
               </motion.div>
             </div>
@@ -431,7 +430,7 @@ const Footer = () => {
       >
         <div className="max-w-6xl mx-auto px-4 py-6">
           <p className="text-center text-gray-400 text-sm">
-            ©2025. Oat Construction. All Rights Reserved.
+            ©2025. EPD CONSTRUCTION. All Rights Reserved.
           </p>
         </div>
       </motion.div>

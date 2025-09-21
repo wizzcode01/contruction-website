@@ -27,18 +27,20 @@ const Navbar = () => {
     exit: {y: "-100%", opacity: 0}
   }
     return (
-    <div>  
-    <div className="h-auto relative w-full overflow-x-hidden bg-gray-950">
+    <div className="fixed top-0 left-0 z-50 w-full">  
+    <div className="h-auto w-full relative overflow-x-hidden bg-gray-950 ">
           <div className="h-auto flex justify-between items-center p-10 ">
                     <span className=" text-white font-bold lg:text-lg sm:text-base md:text-lg text-sm">EPD CONSTRUCTION</span>
                 
                     {/* Desktop links */}
                     <div className="hidden md:flex justify-center items-center sm:gap-3 md:gap-4 lg:gap-8 text-white font-semibold cursor-pointer text-xs sm:text-sm md:text-base ">
-                        <Link to="/" className="hover:text-gray-100 transition-all duration-500 ease-in-out text-amber-500 hover:bg-blue-950 transition-all duration-200 ease-out py-2 px-3 rounded-3xl">Home</Link>
-                        <Link to="/services" className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Services</Link>
-                        <Link to="/" className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">About</Link>
-                        <Link to="/AdminLogin" className=" hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Projects</Link>
-                        <Link to="/AdminLogin" className=" hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Testimonials</Link>
+                                            
+                      <Link to="/" onClick={() => document.getElementById('hero')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-500 ease-in-out text-amber-500 hover:bg-blue-950 transition-all duration-200 ease-out py-2 px-3 rounded-3xl">Home</Link>
+                      <Link to="/" onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Services</Link>
+                      <Link to="/" onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">About</Link>
+                      <Link to="/" onClick={() => document.getElementById('clients')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Projects</Link>
+                      <Link to="/" onClick={() => document.getElementById('whychoose')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Why choose</Link>
+
                     </div>
                     <button to="/login" className="hidden md:flex text-sm bg-white font-bold text-yellow-600  px-2 sm:px-3 md:px-4 py-1 sm:py-1 md:py-2 rounded-3xl
                     hover:bg-yellow-600 hover:border-2 hover:text-white transition-all duration-500 ease-in-out cursor-pointer">Contact Me</button>
@@ -62,11 +64,13 @@ const Navbar = () => {
                 w-full bg-gray-950 bg-opacity-95 z-50 py-6 p-5 transition-all duration-500 ease-in-out ${isOpen? "top-20 opacity-100 translate-y-0" : "top-0 opacity-0 -translate-y-full pointer-events-none"}`}
                  style={{ height: "auto", maxHeight: "calc(100vh - 5rem)", overflowY: "auto" }}
                 >
-                    <Link to="/" className="hover:text-gray-100 transition-all duration-500 ease-in-out text-amber-500 hover:bg-blue-950 py-2 px-3 rounded-3xl">Home</Link>
-                    <Link to="/services" className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Services</Link>
-                    <Link to="/" className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">About</Link>
-                    <Link to="/AdminLogin" className=" hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Projects</Link>
-                    <Link to="/AdminLogin" className=" hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Testimonials</Link>
+                
+                    <Link to="/" onClick={() => document.getElementById('hero')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 text-amber-500 hover:bg-blue-950 transition-all duration-200 ease-out py-2 px-3 rounded-3xl">Home</Link>
+                    <Link to="/" onClick={() => document.getElementById('services')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Services</Link>
+                    <Link to="/" onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">About</Link>
+                    <Link to="/" onClick={() => document.getElementById('clients')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Projects</Link>
+                    <Link to="/" onClick={() => document.getElementById('whychoose')?.scrollIntoView({behavior: 'smooth'})} className="hover:text-gray-100 transition-all duration-200 ease-out hover:bg-blue-950  py-2 px-3 rounded-3xl">Why choose</Link>
+
                     <button to="/login" className=" text-lg bg-white font-bold text-yellow-600  px-5 sm:px-3 md:px-4 py-3 sm:py-1 md:py-2 rounded-lg
                     hover:bg-yellow-600 hover:border-2 hover:text-white transition-all duration-500 ease-in-out cursor-pointer">Contact Me</button>   
              </motion.div> 
