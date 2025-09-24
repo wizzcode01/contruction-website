@@ -122,7 +122,7 @@ const ServicesSection = () => {
 
         {/* Animated Inspirational Quote */}
         <motion.div 
-          className="bg-yellow-500 rounded-2xl p-8 md:p-12 text-center"
+          className="bg-gray-900 rounded-2xl p-8 md:p-12 text-center"
           variants={quoteVariants}
           initial="hidden"
           whileInView="visible"
@@ -132,7 +132,7 @@ const ServicesSection = () => {
             transition: { duration: 0.3 }
           }}
         >
-          <blockquote className="text-xl md:text-2xl font-medium text-white leading-relaxed italic">
+          <blockquote className="text-xl md:text-2xl font-medium text-yellow-500 leading-relaxed italic">
             "Building is not just about bricks and mortar, it's about dreams taking shape, aspirations reaching heights, and legacies being built upon the foundation of passion and perseverance"
           </blockquote>
         </motion.div>

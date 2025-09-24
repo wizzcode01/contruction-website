@@ -27,8 +27,8 @@ const Hero = ({ heroData }) => {
   }, [])
 
   return (
-    <div className="min-h-screen relative w-full overflow-x-hidden bg-gray-500 ">
-      <div className="absolute z-20 inset-0 bg-cover bg-center bg-no-repeat opacity-60 blur-sm bg-white/20 backdrop-blur-md" style={{ backgroundImage: `url(${images[currentImage]})` }}></div>
+    <div className="min-h-screen relative w-full overflow-x-hidden  bg-gray-800 ">
+      <div className="absolute z-20 inset-0 bg-cover bg-center bg-no-repeat opacity-30" style={{ backgroundImage: `url(${images[currentImage]})` }}></div>
       <div className="relative z-20 flex flex-col justify-center items-center mx-auto opacity-80">
         <div className="flex flex-col gap-4 justify-center items-center lg:w-4xl w-full md:w-full p-5 opacity-100 mt-48 lg:m-52">
           <small className="text-xs sm:text-sm text-gray-600">
@@ -37,7 +37,7 @@ const Hero = ({ heroData }) => {
           <motion.h1 
           initial={{opacity:0, y:50}}
           animate={{opacity:1, y:0}}
-          transition={{duration:1.3}}
+          transition={{duration:1.3, delay: 1}}
           key={id}
           className="text-3xl lg:text-5xl text-center sm:text-3xl md:text-4xl font-bold leading-tight text-yellow-500">
              {data.heroH1}{" "}
@@ -52,7 +52,7 @@ const Hero = ({ heroData }) => {
           <motion.p
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:1}}
+            transition={{duration:1, delay:1}}
             className="lg:text-lg text-[19px] font-semibold text-center sm:text-sm md:text-base max-w-full md:w-[90%] text-white"
           >
             {heroData.ptext}
@@ -63,7 +63,7 @@ const Hero = ({ heroData }) => {
               <motion.button
                 initial={{opacity: 0, x: -100}}
                 animate={{x:0, opacity: 1}}
-                transition={{ duration: 1.2, ease: "easeOut" }}
+                transition={{ duration: 1.2, delay: 1.5, ease: "easeOut" }}
                 key={id}
                 onClick={() => window.open("https://wa.me/234912252079", "_blank")}
                 className={`py-2 px-4 sm:py-3 sm:px-5 text-lg sm:text-sm md:text-base transition-all ease-in-out duration-150 rounded-4xl
